@@ -71,7 +71,6 @@ typedef enum {
     UIView *_storedTableHeaderView;
     UIView *_storedTableFooterView;
 }
-
 @property (nonatomic, weak) id<SLExpandableTableViewDelegate> delegate;
 
 // discussion
@@ -94,6 +93,7 @@ typedef enum {
 - (void)collapseSection:(NSInteger)section animated:(BOOL)animated;
 - (void)cancelDownloadInSection:(NSInteger)section;
 - (void)reloadDataAndResetExpansionStates:(BOOL)resetFlag;
+- (void)ignoreCollapseSection:(BOOL)state section:(NSUInteger)section;
 
 - (BOOL)canExpandSection:(NSUInteger)section;
 - (BOOL)isSectionExpanded:(NSInteger)section;
